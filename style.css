@@ -14,6 +14,10 @@
     font-family: 'hind-madurai-bold';
     src: url('fonts/HindMadurai-SemiBold.ttf')
 }
+html{
+cursor:url(./img/bee-cursor.svg)
+
+}
 
 ::-webkit-scrollbar{
     width: 10px;
@@ -33,19 +37,23 @@ background-color: #797979;
     background: #c5c5c5;
 }
 
+
+
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     font-family: futura-medium;
     scroll-behavior: smooth;
+    
 }
 
 body{
     min-height: 100vh;
     height:100%;
     overflow-x: hidden;
-    background: linear-gradient(0deg, rgba(249,197,51,1) 42%, rgba(204,240,226,1) 69%, rgba(105,184,226,1) 100%);
+    background: linear-gradient(180deg, rgba(151,216,255,1) 6%, rgba(171,255,202,1) 12%, rgba(255,218,105,1) 21%);
 }
 
 header{

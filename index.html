@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Parallax Scrolling Website </title>
+        <title>Drippy Bear Club </title>
         <link rel="stylesheet" type="text/css" href="style.css">
         
     </head>
     <body>
         <header>
+            
             <a href="#" class="logo">Drippy Bear Club</a>
+
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
             <ul>
                 <li><a href="#" class="active">Home </a></li>
                 <li><a href="#">Roadmap</a></li>
@@ -16,10 +24,12 @@
                 <li><a href="#">Contact</a></li>
 
             </ul>
+        </div>
         </header>
         <section>
             <img src="./img/sun.png" id="sun">
             <h2 id="slogan">BEE PART OF US</h2>
+            <a href="#sec" id="btn">Explore</a>
             <img src="./img/back.png" id="back">
             <img src="./img/mountain.png" id="mountain">
             <img src="./img/bear.png" id="bear">
@@ -64,6 +74,41 @@
 
 
         </div>
+        <script>
+            let sun = document.getElementById('sun');
+            let back = document.getElementById('back');
+            let mountain = document.getElementById('mountain');
+            let bear = document.getElementById('bear');
+            let slogan = document.getElementById('slogan');
+            let btn = document.getElementById('btn');
+           
+            window.addEventListener('scroll',function(){
+
+            let value = window.scrollY;
+            sun.style.top = value * 0.9 + 'px';
+            slogan.style.marginTop = value * 1 + 'px';
+            btn.style.marginTop = value * 1 + 'px';
+            back.style.top = value * 0.4 + 'px';
+
+            })
+
+
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="sec2">
 
@@ -118,5 +163,25 @@
 
             </div>
         </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Drippy Bear Club</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Perspiciatis iste in dolorum autem ut ipsum, asperiores
+                      molestiae laborum. Laborum saepe praesentium eum. 
+                      In fugiat omnis quaerat adipisci totam blanditiis natus?</p>
+            <ul class="socials">
+                <li><a href="#"><i class="opensea"></i></a></li>
+                <li><a href="#"><i class="tiktok"></i></a></li>
+                <li><a href="#"><i class="twitter"></i></a></li>
+                <li><a href="#"><i class="finstagram"></i></a></li>
+
+
+            </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2022 Drippy Bear Club</p>
+            </div>
+        </footer>
     </body>
 </html>

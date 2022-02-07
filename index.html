@@ -2,6 +2,14 @@
 <html lang="en">
     <head>
         <title>Drippy Bear Club </title>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" type="text/css" href="style.css">
         
     </head>
@@ -9,7 +17,7 @@
         <div class="whole-body">
         <header>
             
-            <a href="#" class="logo">Drippy Bear Club</a>
+            <a href="https://drippybearclub.com/" class="logo">Drippy Bear Club</a>
 
             <div class="navbar-links">
             <ul>
@@ -17,7 +25,7 @@
                 <li><a href="#sec">Roadmap</a></li>
                 <li><a href="#sec2">Gallery</a></li>
                 <li><a href="https://opensea.io/collection/drippybearclub"target="_blank">Buy a Bear</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#sec-contact">Contact</a></li>
 
             </ul>
         </div>
@@ -247,6 +255,183 @@
             </div>
         </div>
         
+       <!-- <div class="sec2" id="sec2">
+            <div class="container">
+                <div class="box">
+                 <a href="" target="_blank">
+                    <img src="./nft/3-OK/bitcoin copie.png">
+                </a>
+                </div>
+              
+
+                <div class="box">
+                <a href="" target="blank">
+                    <img src="./nft/3-OK/color_red.png">
+                </a>
+                </div>
+
+                <div class="box">
+                <a href="" target="blank">
+                     <img src="./nft/3-OK/flash.png">
+                </a>
+                </div>
+
+
+                 <div class="box">
+                <a href="" target="blank">
+                     <img src="./nft/3-OK/green suit.png">
+                </a>
+                 </div>
+
+                 <div class="box">
+                <a href="" target="blank">
+                     <img src="./nft/3-OK/hot dog.png">
+                </a>
+                 </div>
+
+                  <div class="box">
+                <a href="" target="blank">
+                    <img src="./nft/3-OK/kid.png">
+                </a>
+                  </div>
+
+                <div class="box">
+                <a href="" target="blank">
+                      <img src="./nft/3-OK/Kumo.png">
+                </a>
+                 </div>
+
+
+                 
+                 <div class="box">
+                <a href="" target="_blank">
+                    <img src="./nft/3-OK/myself.png">
+                </a>
+                </div>
+
+                  
+                <div class="box">
+                <a href="" target="_blank">
+                    <img src="./nft/3-OK/neymar.png">
+                </a>
+                </div>
+
+                  
+                <div class="box">
+                <a href="" target="_blank">
+                    <img src="./nft/3-OK/teletubbies rouge.png">
+                </a>
+                </div>
+                
+
+                
+
+            </div>
+        </div>
+-->
+        <!--Contact-->
+      
+        <section id="sec-contact" class="section-contact">
+            <img src="./img/bear.png" id="cover-contact">
+            <div class="container-form">
+                
+                <h4>Contact the team!</h4>
+				<p id="contact-text">Fill out the form below to get in touch with one of our team members. We will try to get back to you within 48 hours. If we do not reply within that time please feel free to use the form again.</p>
+
+				<form >
+					<div class="form-group">
+						<label for="firstname">First name*</label>
+						<input 
+							type="text" 
+							name="firstname" 
+							id="firstname" 
+							required 
+							class="form-element" />
+					</div>
+					<div class="form-group">
+						<label for="lastname">Last name*</label>
+						<input type="text" name="lastname" id="lastname" required class="form-element"/>
+					</div>
+					<div class="form-group">
+						<label for="email">Email address*</label>
+						<input type="email" name="email" id="email" required class="form-element"  />
+					</div>
+					<div class="form-group">
+						<label for="company">Company</label>
+						<input type="text" name="company" id="company" class="form-element"  />
+					</div>
+					<div class="form-group full">
+						<label for="message">What are you looking for?</label>
+						<textarea name="message" id="message" class="form-element"></textarea>
+
+                        <div class="g-recaptcha" data-sitekey="6Le-fmMeAAAAAH8FZ9pe9xbcW2tcl0rTx6jL15dT"></div>
+					</div>
+
+                 <!--Ligne de confirmation d'envoi-->
+                 
+                        <div class="btn">
+                        <button type="submit">Send Message</button>
+                        
+                 </div>
+                </div>
+               
+              </form>
+              <div class="status">
+                <?php 
+                if(isset($_POST)['submit']))
+                {
+                    $User_lastname = $_POST['name'];
+                    $User_email = $_POST['email'];
+                    $User_company = $_POST['company'];
+                    $User_message = $_POST['message'];
+
+
+
+                    $email_from = 'drippybearclub@gmail.com';
+                    $email_subject  = "New Form Submission";
+                    $email_body =   "Name: $User_name.\n"
+                                    "Email Id: $User_email.\n"
+                                    "Compagny: $User_company.\n"
+                                    "User Message: $User_message.\n" ;
+
+                    $to_email = "drippybearclub@gmail.com";
+                    $headers = "From: $email_from \r\n";
+                    $headers .= "Reply-To: $User_email \r\n";
+                    
+                    $secretKey = "6Le-fmMeAAAAAMsNWtBIIRspz4fUGj4zdmgpU59a";
+                    $responseKey = $_POST['g-recaptcha-reponse'];
+                    $UserIP = $_SERVER[''];
+                    $url = "https://www.google.com/recaptcha/api/siteverify?
+                    secret=$secretKey&response=&responseKey&remoteip=USerIP";
+
+                    $response = file_get_conctent($url);
+                    $response = file json_decode($response);
+
+                    if($reponse->success)
+                    {
+                        mail($to_email,$email_subject,$email_body,$headers);
+                        echo "Message sent successfully";
+                
+                    }
+                    else
+                    {
+                        echo "<span>Invalid Captcha, Please Try Again </span>";
+                    }
+
+                }
+
+                ?>
+
+
+            </div>
+			</div>
+</section>
+
+
+    <!---Script submit-->
+   
+
+    <!--Footer-->
         <footer>
             <div class="footer-content">
                 <h3>Drippy Bear Club</h3>
@@ -287,7 +472,11 @@
                 <p>copyright &copy;2022 Drippy Bear Club</p>
             </div>
             </div>
+            <script src="./main.js"></script>
         </footer>
     </div>
     </body>
 </html>
+
+
+

@@ -400,7 +400,7 @@
                     
                     $secretKey = "6Le-fmMeAAAAAMsNWtBIIRspz4fUGj4zdmgpU59a";
                     $responseKey = $_POST['g-recaptcha-reponse'];
-                    $UserIP = $_SERVER[''];
+                    $UserIP = $_SERVER['REOMTE_ADDR'];
                     $url = "https://www.google.com/recaptcha/api/siteverify?
                     secret=$secretKey&response=&responseKey&remoteip=USerIP";
 

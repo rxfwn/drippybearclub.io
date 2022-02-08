@@ -171,6 +171,7 @@ section img#sun{
     z-index: 10;
     margin-bottom: 100px;
     transform: translateY(-100px);
+    text-shadow: 4px 4px 8px rgba(116, 116, 116, 0.51);
     
 }
 
@@ -195,7 +196,7 @@ section img#sun{
     z-index: 12;
     position: relative;
     padding:100px;
-    background: linear-gradient(0deg, rgba(14,14,14,1) 0%, rgba(22,77,40,1) 28%);
+    background: linear-gradient(180deg, rgba(22,77,40,1) 2%, rgba(14,14,14,1) 100%);
 }
 
 .sec2
@@ -203,6 +204,7 @@ section img#sun{
     position: relative;
     padding:0 100px 10px 100px;
     background: #0e0e0e;
+    z-index: 20;
 }
 
 
@@ -211,7 +213,7 @@ section img#sun{
     font-size: 4em;
     text-transform: uppercase;
     font-family:hind-madurai-bold ;
-    margin-bottom: 10px;
+    margin-bottom:-80px;
     color:#fff;
     letter-spacing:3px;
    
@@ -227,7 +229,7 @@ section img#sun{
 
 .sec h3{
     font-family:hind-madurai-bold ;
-    font-size: 2em;
+    font-size: 6em;
     color:rgb(255, 255, 255);
     z-index: 20;
 }
@@ -291,7 +293,6 @@ h2{
     font-size: 4em;
     text-transform: uppercase;
     font-family:hind-madurai-bold ;
-    margin-bottom: 10px;
     color:#fff;
     letter-spacing:3px;
 
@@ -563,4 +564,11 @@ color:#fff;
 .info{
     font-size: 4em;
     color:rgb(255, 255, 255)
+    
+}
+
+#road{
+  width: 100%;
+  height: 100%;
+background-size: cover;
 }

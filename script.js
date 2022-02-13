@@ -1,5 +1,5 @@
 //Target date in milliseconds
-const countDownDate = new Date("Feb 14, 2022 00:00:00").getTime();
+const countDownDate = new Date("Feb 15, 2022 00:00:00").getTime();
 
 let x = setInterval(() => {
   //Today date in milliseconds
